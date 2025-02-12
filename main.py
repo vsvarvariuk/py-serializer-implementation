@@ -11,7 +11,6 @@ def serialize_car_object(car: Car) -> bytes:
     return json
 
 
-
 def deserialize_car_object(json: bytes) -> Car:
     stream = io.BytesIO(json)
     data = JSONParser().parse(stream)
@@ -21,4 +20,3 @@ def deserialize_car_object(json: bytes) -> Car:
         return car_instance
     else:
         raise ValueError("Invalid data")
-
